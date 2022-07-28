@@ -1,0 +1,18 @@
+.container {
+  padding: 80px;
+  display: flex;
+}
+.photo {
+  margin-left: 2%;
+  max-width: 20%;
+  max-height: 20%;
+}
+.description {
+  color: white;
+  margin-left: 2%;
+  padding: 3%;
+  flex-wrap: wrap;
+}
+a {
+  margin-top: 1%;
+}

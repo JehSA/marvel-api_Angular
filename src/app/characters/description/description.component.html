@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="photo">
+    <img class="card-img-top mt-4" src="{{ characterId.thumbnail.path }}.{{ characterId.thumbnail.extension }}">
+  </div>
+  <div class="description">
+    <h1><strong>{{ characterId.name }}</strong></h1>
+    <p>{{ characterId.description }}</p>
+    <a routerLink="/characters" class="btn btn-primary">Go Comics</a>
+  </div>
+  <!--div style="background-color: blue;">
+    <p>{{ comic.title }}</p>
+  </!--div-->
+</div>
+
