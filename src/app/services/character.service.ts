@@ -16,7 +16,7 @@ export class CharacterService {
   PUBLIC_KEY = '21cf2a321b6e3a678e1007780d8e5709';
   PRIVATE_KEY = '47daf1a288e0e32477c7d1fd1f245a194a69fbf8';
   HASH = Md5.hashStr(this.TS_VAR + this.PRIVATE_KEY + this.PUBLIC_KEY);
-  PAGINATION = 'limit=6&offset=0&';
+  PAGINATION = 'limit=20&offset=0&';
   URL_API = 'https://gateway.marvel.com:443/v1/public';
   URL_PASS = `&ts=${this.TS_VAR}&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
 
@@ -33,19 +33,31 @@ export class CharacterService {
     .pipe(map((obj) => obj.data.results[0]))
   }
 
+  //Aqui estou definindo a service, passando o endereço dos dados que pretendo acessar em Comics.
   getComicByCharacter(id: any) {
-    return this.http.get<any>(`${this.URL_API}/${id}/comics?${this.URL_PASS}`)
+    return this.http.get<any>(`${this.URL_API}/characters/${id}/comics?${this.URL_PASS}`)
+    .pipe(map((obj) => obj.data.results))
+  }
+
+  //Aqui estou definindo a service, passando o endereço dos dados que pretendo acessar em Series.
+  getSeriesByCharacter(id: any) {
+    return this.http.get<any>(`${this.URL_API}/characters/${id}/series?${this.URL_PASS}`)
     .pipe(map((obj) => obj.data.results[0]))
   }
 
-  pagination(page?: number | undefined, limit?: number | undefined): Observable<any> {
-    return this.http.get<any>(`${this.URL_API}/characters?${this.URL_PASS}`)
-    .pipe(map((data: any) => data.data))
+  getAllEvent() {
+    return this.http.get<any>(`${this.URL_API}/events?${this.URL_PASS}`)
+    .pipe(map((obj) => obj.data.results))
   }
 
-  registers(): Observable<any> {
-    return this.http.get<any>(`${this.URL_API}/characters?${this.PAGINATION}${this.URL_PASS}`)
-    .pipe(map((data: any) => data.data.results[0]))
+  getEventById(id: any) {
+    return this.http.get<any>(`${this.URL_API}/events/${id}?${this.URL_PASS}`)
+    .pipe(map((obj) => obj.data.results[0]))
   }
+
+  //pagination(page?: number | undefined, limit?: number | undefined): Observable<any> {
+  //  return this.http.get<any>(`${this.URL_API}/characters?page=${page}&limit=${limit}&apikey=21cf2a321b6e3a678e1007780d8e5709`)
+  //  .pipe(map((data: any) => data.data))
+  //}
 
 }

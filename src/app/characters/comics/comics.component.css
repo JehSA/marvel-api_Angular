@@ -1,0 +1,21 @@
+.container {
+  margin-top: 100px;
+}
+.div-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+th {
+  text-align: center;
+}
+td {
+  vertical-align: middle;
+  cursor: pointer;
+}
+li {
+  color: aliceblue;
+}
+img {
+  max-height: 50px;
+}

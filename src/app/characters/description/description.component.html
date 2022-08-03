@@ -5,10 +5,17 @@
   <div class="description">
     <h1><strong>{{ characterId.name }}</strong></h1>
     <p>{{ characterId.description }}</p>
-    <a routerLink="/characters" class="btn btn-primary">Go Comics</a>
   </div>
+  <!-- Trazendo informações para a tela -->
   <!--div style="background-color: blue;">
     <p>{{ comic.title }}</p>
-  </!--div-->
+  </!--div>
+  <div-- style="background-color: rgb(179, 255, 0);">
+    <p>{{ series.title }}</p>
+  </div-->
 </div>
-
+<div class="btns">
+  <a routerLink="/characters" class="btn btn-primary">Go Back</a>
+  <a routerLink="/comics/{{ characterId.id }}" class="btn btn-primary">Go Comics</a>
+  <a routerLink="/events" class="btn btn-primary">Go Events</a>
+</div>

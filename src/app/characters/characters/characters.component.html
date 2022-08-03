@@ -1,5 +1,3 @@
-
-
 <div class="container">
   <div class="card card-body text-center" *ngFor="let character of allCharacters | async">
     <img class="card-img-top mt-4" src="{{ character.thumbnail.path }}.{{ character.thumbnail.extension }}">
@@ -7,16 +5,17 @@
       <h3 class="card-title"><strong>{{ character.name }}</strong></h3>
       <!--p class="card-text">{{ character.description }}</!--p-->
       <!--a href="{{ character.urls[0].url }}" target="_blank" class="btn btn-primary">Go Character</!--a-->
-      <a routerLink="/description/{{ character.id }}" class="btn btn-primary">Go Character</a>
+      <a routerLink="/description/{{ character.id }}" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Go Character</a>
     </div>
   </div>
   <div>
-    <mat-paginator (page)="onPaginateChange($event)"
+    <!--mat-paginator (page)="onPaginateChange($event)"
                   [length]="length"
                   [pageSize]="pageSize"
                   [pageSizeOptions]="pageSizeOptions"
-                  aria-label="Select page">
-    </mat-paginator>
+                  aria-label="Select page"
+                  showFirstLastButtons >
+    </mat-paginator-->
     <!--pagination-controls (pageChange)="page=$event"></!--pagination-controls-->
   </div>
 </div>

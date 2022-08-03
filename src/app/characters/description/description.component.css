@@ -12,7 +12,11 @@
   margin-left: 2%;
   padding: 3%;
   flex-wrap: wrap;
+  margin-right: 0%;
+  flex-grow: 12;
 }
-a {
-  margin-top: 1%;
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
 }

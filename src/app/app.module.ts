@@ -15,21 +15,27 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
-import { CharactersComponent } from './characters/characters/characters.component';
+
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { DescriptionComponent } from './characters/description/description.component';
+import { CharactersComponent } from './characters/characters/characters.component';
+import { ComicsComponent } from './characters/comics/comics.component';
+import { EventsComponent } from './envents/events/events.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharactersComponent,
     NavbarComponent,
-    DescriptionComponent
+    CharactersComponent,
+    DescriptionComponent,
+    ComicsComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,8 @@ import { DescriptionComponent } from './characters/description/description.compo
     MatMenuModule,
     MatListModule,
     MatPaginatorModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
