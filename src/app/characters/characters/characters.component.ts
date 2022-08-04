@@ -45,17 +45,6 @@ export class CharactersComponent implements OnInit {
     //this.pagination();
   }
 
-  //onPaginateChange($event: { pageSize: number; length: any; pageIndex: number; }) {
-//
-  //  if(this.pageSize !== $event.pageSize)  {
-  //    this.pagination($event.pageIndex + 1, $event.pageSize);
-  //  }
-  //  this.pageSize = $event.pageSize;
-  //  this.length = $event.length;
-  //  this.pageIndex = $event.pageIndex;
-//
-  //}
-
   public getCharacters() {
     this.allCharacters = this.characterService.getAllCharacters()
     console.log(this.allCharacters)
@@ -83,6 +72,7 @@ export class CharactersComponent implements OnInit {
   //  })
   //}
 
+  //Função que abre a página description em um modal.
   //openDialog() {
   //  const dialogRef = this.dialog.open(DescriptionComponent, {
   //    width: '75%',
@@ -94,6 +84,15 @@ export class CharactersComponent implements OnInit {
   //  });
   //}
 
-
+    //onPaginateChange($event: { pageSize: number; length: any; pageIndex: number; }) {
+//
+  //  if(this.pageSize !== $event.pageSize)  {
+  //    this.pagination($event.pageIndex + 1, $event.pageSize);
+  //  }
+  //  this.pageSize = $event.pageSize;
+  //  this.length = $event.length;
+  //  this.pageIndex = $event.pageIndex;
+//
+  //}
 
 }

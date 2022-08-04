@@ -2,28 +2,15 @@
   <mat-toolbar class="header mat-elevation-z4">
     <button class="menu-principal" mat-button [matMenuTriggerFor]="menu"><h1>Menu</h1></button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Home</button>
-      <button mat-menu-item [matMenuTriggerFor]="characters">Characters</button>
-      <button mat-menu-item>Events</button>
+      <button mat-menu-item routerLink="/home">Home</button>
+      <button mat-menu-item routerLink="/characters">Characters</button>
+      <button mat-menu-item routerLink="/hqs">Comics</button>
+      <button mat-menu-item routerLink="/events">Events</button>
     </mat-menu>
-
-    <mat-menu #characters="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="fish">Teste</button>
-      <button mat-menu-item>Description</button>
-    </mat-menu>
-
-    <mat-menu #fish="matMenu">
-      <button mat-menu-item>Teste 1</button>
-      <button mat-menu-item>Teste 2</button>
-      <button mat-menu-item>Teste 3</button>
-      <button mat-menu-item>Teste 4</button>
-      <button mat-menu-item>Teste 5</button>
-    </mat-menu>
-
-    <span class="title"><h1>All Characters</h1></span>
+    <!--span class="title"><h1>All Characters</h1></!--span-->
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <img src="../../../assets/marvel.svg" alt="" />
+      <img src="../../../assets/marvel.svg" alt="" routerLink="/home"/>
     </button>
   </mat-toolbar>
 </header>

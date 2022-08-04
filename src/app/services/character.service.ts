@@ -45,16 +45,31 @@ export class CharacterService {
     .pipe(map((obj) => obj.data.results[0]))
   }
 
+  //Buscando todos os eventos.
   getAllEvent() {
     return this.http.get<any>(`${this.URL_API}/events?${this.URL_PASS}`)
     .pipe(map((obj) => obj.data.results))
   }
 
+  //Buscando eventos por Id..
   getEventById(id: any) {
     return this.http.get<any>(`${this.URL_API}/events/${id}?${this.URL_PASS}`)
     .pipe(map((obj) => obj.data.results[0]))
   }
 
+  //Buscando todos os comics (hq's)
+  getAllComics() {
+    return this.http.get<any>(`${this.URL_API}/comics?${this.URL_PASS}`)
+    .pipe(map((obj) => obj.data.results))
+  }
+
+  //Buscando comics por id
+  getComicById(id: any) {
+    return this.http.get<any>(`${this.URL_API}/comics/${id}?${this.URL_PASS}`)
+    .pipe(map((obj) => obj.data.results[0]))
+  }
+
+  //Função que define os parâmetros da paginação....
   //pagination(page?: number | undefined, limit?: number | undefined): Observable<any> {
   //  return this.http.get<any>(`${this.URL_API}/characters?page=${page}&limit=${limit}&apikey=21cf2a321b6e3a678e1007780d8e5709`)
   //  .pipe(map((data: any) => data.data))

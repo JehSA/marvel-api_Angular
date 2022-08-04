@@ -25,6 +25,10 @@ import { DescriptionComponent } from './characters/description/description.compo
 import { CharactersComponent } from './characters/characters/characters.component';
 import { ComicsComponent } from './characters/comics/comics.component';
 import { EventsComponent } from './envents/events/events.component';
+import { CoverComponent } from './characters/comics/cover/cover.component';
+import { HomeComponent } from './home/home/home.component';
+import { HqsComponent } from './hqs/hqs/hqs.component';
+import { HqDescriptionComponent } from './hqs/hq-description/hq-description.component';
 
 
 
@@ -35,7 +39,11 @@ import { EventsComponent } from './envents/events/events.component';
     CharactersComponent,
     DescriptionComponent,
     ComicsComponent,
-    EventsComponent
+    EventsComponent,
+    CoverComponent,
+    HomeComponent,
+    HqsComponent,
+    HqDescriptionComponent
   ],
   imports: [
     BrowserModule,

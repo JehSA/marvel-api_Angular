@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="card card-body text-center" *ngFor="let comics of allComics | async">
+    <img class="card-img-top mt-4" src="{{ comics.thumbnail.path }}.{{ comics.thumbnail.extension }}">
+    <div class="card-body">
+      <h4 class="card-title"><strong>{{ comics.title }}</strong></h4>
+      <a routerLink="/hqs/{{ comics.id }}" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Go HQ</a>
+    </div>
+  </div>
+</div>

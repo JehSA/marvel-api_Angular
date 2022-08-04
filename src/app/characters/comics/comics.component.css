@@ -19,3 +19,8 @@ li {
 img {
   max-height: 50px;
 }
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+}

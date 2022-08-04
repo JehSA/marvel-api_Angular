@@ -1,11 +1,13 @@
-<p>event-description works!</p>
 <div class="container">
-  <!-- Trazendo informações para a tela -->
-  <div style="background-color: blue;">
-    <p>{{ event.title }}</p>
+  <div class="photo">
+    <img class="card-img-top mt-4" src="{{ event.thumbnail.path }}.{{ event.thumbnail.extension }}">
   </div>
-  <div style="background-color: rgb(179, 255, 0);">
-    <p>{{ event.id }}</p>
+  <div class="description">
+    <h1><strong>{{ event.title }}</strong></h1>
+    <p>{{ event.description }}</p>
   </div>
-
 </div>
+<div class="btns">
+  <a routerLink="/events" class="btn btn-primary">Back</a>
+</div>
+

@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let comic of comicsId">
+        <tr *ngFor="let comic of comicsId" (click)="openDialog()">
           <td scope="row">{{ comic.id }}</td>
           <td><img class="card-img-top" src="{{ comic.thumbnail.path }}.{{ comic.thumbnail.extension }}"></td>
           <td>{{ comic.title }}</td>
@@ -19,4 +19,7 @@
       </tbody>
     </table>
   </div>
+</div>
+<div class="btns">
+  <a routerLink="/description" class="btn btn-primary">Back</a>
 </div>
