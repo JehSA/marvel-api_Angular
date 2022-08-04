@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { CharacterService } from 'src/app/services/character.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -13,7 +13,8 @@ export class EventDescriptionComponent implements OnInit {
 
   constructor(
     private service: CharacterService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -26,6 +27,11 @@ export class EventDescriptionComponent implements OnInit {
       this.event = eventId;
       console.log(eventId, "persona!!!!")
     });
+  }
+
+  btnBack(): void {
+    this.router.navigate(['/events'])
+    console.log(this.router)
   }
 
 }
